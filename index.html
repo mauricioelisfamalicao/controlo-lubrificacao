@@ -1425,6 +1425,21 @@ document.getElementById("refreshBtn").addEventListener("click", async ()=>{
   );
 
   console.log("Supabase conectado", supabaseClient);
+  async function testarSupabase() {
+  const { data, error } = await supabaseClient
+    .from("instalacoes")
+    .select("*")
+    .limit(5);
+
+  if (error) {
+    console.error("❌ Error al leer Supabase:", error);
+    return;
+  }
+
+  console.log("✅ Supabase responde correctamente:", data);
+}
+
+testarSupabase();
 </script>
   
 </body></html>
