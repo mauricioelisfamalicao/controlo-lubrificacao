@@ -1417,14 +1417,14 @@ document.getElementById("refreshBtn").addEventListener("click", async ()=>{
 
 <script>
   const SUPABASE_URL = "https://hoawqazkejhpfxjrgvkx.supabase.co";
-  const SUPABASE_KEY = sb_publishable_8-fM64u6dmRnQTJ2lZkxow_nB2oEH_M;
+  const SUPABASE_KEY = "sb_publishable_8-fM64u6dmRnQTJ2lZkxow_nB2oEH_M";
 
-  const supabase = window.supabase.createClient(
+  const supabaseClient = window.supabase.createClient(
     SUPABASE_URL,
     SUPABASE_KEY
   );
 
-  console.log("Supabase conectado", supabase);
+  console.log("Supabase conectado", supabaseClient);
 </script>
   
 </body></html>
