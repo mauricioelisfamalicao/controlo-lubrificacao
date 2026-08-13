@@ -371,6 +371,7 @@
     }
   }
 </style>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
 
@@ -1414,5 +1415,16 @@ document.getElementById("refreshBtn").addEventListener("click", async ()=>{
 })();
 </script>
 
+<script>
+  const SUPABASE_URL = "https://hoawqazkejhpfxjrgvkx.supabase.co";
+  const SUPABASE_KEY = sb_publishable_8-fM64u6dmRnQTJ2lZkxow_nB2oEH_M;
 
+  const supabase = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+  );
+
+  console.log("Supabase conectado", supabase);
+</script>
+  
 </body></html>
